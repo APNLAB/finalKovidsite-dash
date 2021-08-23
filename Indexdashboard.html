@@ -1,0 +1,152 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    <script type="text/javascript" src="script-dashboard.js" defer></script>
+   
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style-dashboard.css">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>COVID-19: Analysis Dashboard of Sri Lanka</h1>
+        <h3 class="status-note" style="color: white !important;">Last Updated: <span id="realtime">~</span>
+        </h3>
+    </div>
+
+
+        <div><span><h2>Total Figures (SL)</h2></span></div>
+        <div class="content">
+            
+            <div class="box confirmed">
+                <p>Confirmed Cases</p>
+                <h3 id="totalcases"></h3>
+                
+            </div>
+            <div class="box deaths">
+                <p>Deaths</p>
+                <h3 id="totaldeaths"></h3>
+            </div>
+            <div class="box recovered">
+                <p>Recovered</p>
+                <h3 id="totalrecovered"></h3>
+            </div>
+        </div>
+        <div><span><h2>Daily Figures (SL) in Last 24 Hours</h2></span></div>
+        <div class="content">
+            
+            <div class="box confirmed">
+                <p>New Confirmed Cases</p>
+                <h3 id="dialycase">~</h3>
+                
+            </div>
+            <div class="box deaths">
+                <p>Deaths</p>
+                <h3 id="dialydeath">~</h3>
+                
+            </div>
+            <div class="box recovered">
+                <p>Recovered</p>
+                <h3 id="dialyrecovered">~</h3>
+                
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 15px;">Local Highlights</h2> 
+        
+        <div class="allstats">
+            
+                <p style="color:white;"><i class="fas fa-user-check"></i>  Local Active Cases: <span id="localActive"></span></p>
+                <p style="color:white;"><i class="fas fa-hand-holding-heart"></i>  Local Hospitalized: <span id="hospital"></span></p>
+                <p style="color:white;"><i class="fas fa-syringe"></i>  Total PCR Count: <span id="total-pcr"></span></p>
+                <p style="color:white;"><i class="far fa-clock"></i>  Daily PCR Count: <span id="dailypcrCount"></span></p>
+            
+        </div>
+    </div> 
+               
+                
+
+<div class="containerBelow">
+                <h2 style="margin: 10px;">Global Highlights (Realtime)</h2>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+                </iframe>
+                </div>
+                    <style>
+                        .embed-container 
+                        {   
+                            display: flex;
+                            justify-content: center;
+                            margin-left: 20px;
+                            margin-right: 20px;
+                            height: 750px;
+                                                    
+                        } 
+                        embed-container iframe, .embed-container object, 
+                        .embed-container iframe{
+                            display: flex;
+                            justify-content: center;
+                            position: absolute; 
+                            width: 80%; 
+                            height: 80%;
+                            border: 4px solid black;
+                            border-radius: 6px;
+                            margin: auto;
+                            align-items: center;  
+                        } 
+                        @media screen and (max-width: 992px) {
+                            embed-container iframe, .embed-container object, 
+                        .embed-container iframe {
+      
+                            width: 100%; 
+                            height: 80%;
+                                }   
+                         }
+                        </style>
+                    
+</div> 
+<div class="advertisement">
+   
+</div>
+
+<footer class="section">
+  <div class="flex">
+    <div class="links">
+        <h4 class="footerheader"><i class="fas fa-link"></i> Quick Links</h4>
+        <ul>
+            <li>
+                <a href="index.html"> Home</a>
+            </li>
+            <li>
+                <a href="index.html"> About Corona</a>
+            </li>
+        </ul>
+    </div>
+    <div class="importantlinks">
+        <h4 class="footerheader"><i class="fas fa-link"></i> Important Links</h4>
+        <ul>
+            <li>
+                <a href="https://www.who.int/"> WHO</a>
+            </li>
+            <li>
+                <a href="https://www.hpb.health.gov.lk/en"> Ministry Of Health</a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <p>
+      copyright &copy; <a href="https://apnlab.com.lk/" class="maincom" target="_blank" >APN Labs</a>
+      <span id="date"> </span>
+      .All Rights Reserved
+    </p>
+  </footer>
+                      
+</body>
